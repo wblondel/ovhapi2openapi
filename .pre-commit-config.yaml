@@ -1,0 +1,36 @@
+ci:
+  autofix_prs: false
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        exclude: ^.*\.egg-info/
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: pretty-format-json
+        args: [--autofix, --no-ensure-ascii, --no-sort-keys]
+      - id: check-ast
+      - id: debug-statements
+      - id: check-docstring-first
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-check-mock-methods
+      - id: python-use-type-annotations
+      - id: python-check-blanket-type-ignore
+      - id: python-check-blanket-noqa
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: f8afb19e031629ee035c4a2128e86dfc7f08355c
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+      - id: poetry-export
+        args: ["-f", "requirements.txt", "-o", "requirements.txt"]
