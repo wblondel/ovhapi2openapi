@@ -27,6 +27,12 @@ repos:
       - id: python-check-blanket-type-ignore
       - id: python-check-blanket-noqa
 
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.941
+    hooks:
+      - id: mypy
+        pass_filenames: false
+
   - repo: https://github.com/python-poetry/poetry
     rev: f8afb19e031629ee035c4a2128e86dfc7f08355c
     hooks:
