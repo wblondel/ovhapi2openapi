@@ -2,17 +2,17 @@ from click.testing import CliRunner
 from ovhapi2openapi.console.application import cli
 
 
-def test_sync():
+def test_sync() -> None:
     runner = CliRunner()
-    result = runner.invoke(cli, ['--debug', 'sync'])
+    result = runner.invoke(cli, ["--debug", "sync"])
     assert result.exit_code == 0
-    assert 'Debug mode is on' in result.output
-    assert 'Syncing' in result.output
+    assert "Debug mode is on" in result.output
+    assert "Syncing" in result.output
 
 
-def test_sync_no_debug():
+def test_sync_no_debug() -> None:
     runner = CliRunner()
-    result = runner.invoke(cli, ['sync'])
+    result = runner.invoke(cli, ["sync"])
     assert result.exit_code == 0
-    assert 'Debug mode is off' in result.output
-    assert 'Syncing' in result.output
+    assert "Debug mode is off" in result.output
+    assert "Syncing" in result.output

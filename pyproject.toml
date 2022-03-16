@@ -54,10 +54,19 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
+
+[tool.black]
+target-version = ['py37']
+experimental_string_processing = true
+force-exclude = '''
+.*/setup\.py$
+'''
+
+
 [tool.mypy]
 # Import discovery
 ignore_missing_imports = false
-files = "src"
+files = ["src", "tests"]
 
 # Untyped definitions and calls
 disallow_untyped_calls = true
