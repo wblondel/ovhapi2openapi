@@ -1,5 +1,6 @@
 ci:
   autofix_prs: false
+  skip: [poetry-lock]
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -76,6 +77,5 @@ repos:
     hooks:
       - id: poetry-check
       - id: poetry-lock
-        args: ["--no-update"]
       - id: poetry-export
         args: ["-f", "requirements.txt", "-o", "requirements.txt"]
