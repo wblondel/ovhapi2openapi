@@ -1,5 +1,5 @@
 import importlib.resources as pkg_resources
-from typing import Any, Tuple, Optional
+from typing import Any, Tuple, Optional, List
 
 import click
 import yaml
@@ -22,7 +22,7 @@ def _arg_split(ctx: click.Context, param: click.Parameter, value: str) -> list:
 
 
 def _check_requested_apis(
-    available_apis_paths: list[str], requested_apis: list[str]
+    available_apis_paths: List[str], requested_apis: List[str]
 ) -> Tuple[bool, Optional[str]]:
     for requested_api in requested_apis:
         if requested_api not in available_apis_paths:
