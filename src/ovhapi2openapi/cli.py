@@ -79,7 +79,7 @@ def _check_requested_apis(
 )
 @click.version_option(prog_name="ovhapi2openapi")
 def main(
-    req_server: str, req_apis: list[str], output_format: str, output_file: str
+    req_server: str, req_apis: List[str], output_format: str, output_file: str
 ) -> None:
     server: dict = OVH_SERVERS[req_server]
 
