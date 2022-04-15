@@ -4,7 +4,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+    rev: v4.2.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -48,13 +48,13 @@ repos:
           - pep8-naming==0.12.1
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.31.1
+    rev: v2.32.0
     hooks:
       - id: pyupgrade
         args: [--py37-plus]
 
   - repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 22.3.0
     hooks:
       - id: black
 
@@ -65,7 +65,7 @@ repos:
         additional_dependencies: *flake8_deps
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.941
+    rev: v0.942
     hooks:
       - id: mypy
         pass_filenames: false
@@ -73,7 +73,7 @@ repos:
         additional_dependencies: [click]
 
   - repo: https://github.com/python-poetry/poetry
-    rev: f8afb19
+    rev: 1.2.0b1
     hooks:
       - id: poetry-check
       - id: poetry-lock
