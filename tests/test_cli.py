@@ -1,18 +1,10 @@
 from click.testing import CliRunner
-from ovhapi2openapi.console.application import cli
+
+from ovhapi2openapi.cli import main
 
 
-def test_sync() -> None:
+def test_version() -> None:
     runner = CliRunner()
-    result = runner.invoke(cli, ["--debug", "sync"])
+    result = runner.invoke(main, "--version")
     assert result.exit_code == 0
-    assert "Debug mode is on" in result.output
-    assert "Syncing" in result.output
-
-
-def test_sync_no_debug() -> None:
-    runner = CliRunner()
-    result = runner.invoke(cli, ["sync"])
-    assert result.exit_code == 0
-    assert "Debug mode is off" in result.output
-    assert "Syncing" in result.output
+    assert "ovhapi2openapi, version" in result.output

@@ -1,0 +1,37 @@
+# List of OVH API servers
+---
+ovh-eu:
+  name: OVH Europe
+  description: Build your own OVH world.
+  url: https://eu.api.ovh.com
+  latest-version: 1.0
+ovh-us:
+  name: OVH US
+  description: Build your own OVH world.
+  url: https://api.us.ovhcloud.com
+  latest-version: 1.0
+ovh-ca:
+  name: OVH North America
+  description: Build your own OVH world.
+  url: https://ca.api.ovh.com
+  latest-version: 1.0
+soyoustart-eu:
+  name: So You Start Europe
+  description: Build your own So you Start world.
+  url: https://eu.api.soyoustart.com
+  latest-version: 1.0
+soyoustart-ca:
+  name: So You Start North America
+  description: Build your own So you Start world.
+  url: https://ca.api.soyoustart.com
+  latest-version: 1.0
+kimsufi-eu:
+  name: Kimsufi Europe
+  description: Build your own Kimsufi world.
+  url: https://eu.api.kimsufi.com
+  latest-version: 1.0
+kimsufi-ca:
+  name: Kimsufi North America
+  description: Build your own Kimsufi world.
+  url: https://ca.api.kimsufi.com
+  latest-version: 1.0

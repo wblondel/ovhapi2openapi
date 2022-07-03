@@ -37,6 +37,8 @@ generate-setup-file = false
 [tool.poetry.dependencies]
 python = "^3.7"
 click = "^8.0"
+requests = "^2.27.1"
+requests-cache = "^0.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1"
@@ -44,9 +46,10 @@ pytest-sugar = "^0.9"
 pytest-mock = "^3.7"
 pytest-cov = "^3.0"
 pre-commit = "^2.17"
+types-PyYAML = "^6.0.5"
 
 [tool.poetry.scripts]
-ovhapi2openapi = "ovhapi2openapi.console.application:cli"
+ovhapi2openapi = "ovhapi2openapi.cli:main"
 
 
 [build-system]
@@ -57,7 +60,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 target-version = ['py37']
-experimental_string_processing = true
+preview = true
 force-exclude = '''
 .*/setup\.py$
 '''

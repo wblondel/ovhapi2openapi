@@ -11,3 +11,6 @@ mypy-init-return = true
 enable-extensions = TC, TC1
 type-checking-exempt-modules = typing, typing-extensions
 eradicate-whitelist-extend = ^-.*;
+per-file-ignores =
+    # FS002: '.format' used
+    cli.py:FS002
